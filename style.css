@@ -1,0 +1,339 @@
+:root {
+    --primary-color:#bb4438;
+    --btn-hover:#9a1d10;
+    --txt-color:#69635e;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.intro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    animation: intro 2s forwards;
+    z-index: 10000;
+}
+
+@keyframes intro {
+    0%{
+        opacity: 1;
+        top:0px;
+    }
+
+    40%{
+        opacity: 1;
+        top:0px;
+    }
+    99%{
+        opacity: 0;
+        top:0px;
+    }
+    100%{
+        opacity: 0;
+        top:-5000px;
+    }
+}
+
+.introLogo {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    width: 360px;
+    transform: translate(-50%, -50%);
+}
+
+.song {
+    font-family: 'Noto Serif TC', serif;
+}
+
+h1{
+    font-size: 60px;
+    font-weight: 300;;
+    color: #624744;
+    letter-spacing: 0.2em;
+}
+
+.topBar{
+    height: 130px;
+    width: 100%;
+    background: transparent;
+    justify-content: space-between;
+    box-sizing: content-box;
+    background-color: #F9F9F9;
+    /* position: fixed;  */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.topBar::after{
+    margin-top: 20px;
+    content: '';
+    background: #d7d5d2;
+    width: 96%;
+    height: 0.5px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    display: block;
+}
+
+.nav_function {
+    width: 498px; 
+    height: 30px;
+    margin-right: 30px;
+    margin-top: 30px;
+    right: 0;
+    position: absolute;
+}
+
+.logotype {
+    width: 190px ;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.banner {
+    background-image: url("img/bg_01.jpg");
+    /* background-image: url("https://picsum.photos/2100"); */
+    height: 80vh; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    animation: fade_in 1.3s ease 0.5s forwards;
+}
+
+.nav {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-40%);
+    width: 1100px;
+}
+
+.nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.nav li {
+    float: left;
+}
+
+.nav li a{
+    display: block;
+    color: var(--txt-color);
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    font-size: 14px;
+    transition: 0.3s;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.nav li a:hover {
+    color:var(--primary-color);
+}
+
+#navicon_02 {
+    height: 18px;
+}
+
+
+.nav svg {
+    fill: var(--txt-color);
+    height: 16px;
+    margin-right: 5px;;
+}
+
+
+.banner_heading {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20%;
+    opacity: 0;
+    animation: fade_in 1.3s ease 1.2s forwards;
+}
+
+.banner_heading img{
+    width: 650px;
+}
+
+@keyframes fade_in {
+    0%{
+        opacity: 0;
+        top: 15%;
+    }
+    100%{
+        opacity: 1;
+        top: 20%;
+    }
+}
+
+.news {
+    /* background: var(--primary-color); */
+    background-color: rgba(187, 68, 56, 0.95);
+    /* height:252px; */
+    width: 90%;
+    position: absolute;
+    right: 0px;
+    top: 70%;
+    z-index: 10;
+    padding: 20px;
+    display: flex;
+}
+
+.news .news-title {
+    color: white;
+    font-size: 28px;
+    letter-spacing: 0.2em;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 200;
+    width: 650px;
+    text-align: center;
+    top:70px;
+    position: relative;
+    padding: 0px 10px;
+}
+
+.news .news-title::after{
+    margin-top: 10px;
+    content: '';
+    background: #d7d5d2;
+    width: 50px;
+    height: 2px;
+    margin-left: 13px;
+    display: block;
+}
+
+.carousel {
+    overflow: hidden;
+}
+
+.news .carousel .post {
+    display: inline-block;
+    width: 240px;
+    height: 200px;
+    margin: 0px 5px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.news .carousel .post .post_img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.post_info{
+    color: white;
+    letter-spacing: 0.1em;
+}
+
+.post_info small {
+    font-size: 10px;   
+}
+
+.post_info h4{
+    font-weight: 300;
+}
+
+button {
+    border-style: none;
+    background-color: var(--primary-color) ;
+    border-radius: 3px;
+    color: white;
+    height: 36px;
+    padding: 0px 30px;
+    letter-spacing: 0.2em;
+    transition: linear 0.1s;
+}
+
+button:hover{
+    background-color: var(--btn-hover);
+}
+
+.btn_knowMore {
+    top: 140px;
+    position: absolute;
+    left: 48%;
+    transform: translateX(-50%);
+}
+
+.aboutUs{
+    height: 1000px;
+    width: 100%;
+    background-image: url("img/aboutUs_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-position-y: 600px;
+}
+
+.aboutUs_title {
+    font-size: 28px;
+    letter-spacing: 0.2em;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 200;
+    color: #69635e;
+}
+
+.aboutUs_title::after{
+    margin-top: 10px;
+    content: '';
+    background: var(--txt-color);
+    width: 50px;
+    height: 2px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.aboutUs_inner {
+    margin-top: 300px;
+    position: absolute;
+    width: 40%;
+    left: 10%;
+    z-index: 1000;
+}
+
+.aboutUs p{
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    line-height: 3em;
+    margin-bottom: 30px;
+    color: var(--txt-color);
+}
+
+.footer {
+    background-color: var(--txt-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.handAndPlant{
+    width: 375px;
+    right: 8%;
+    position: absolute;
+    margin-top: 250px;
+}
+
+.makingHerb {
+    width: 340px;
+    right: 35%;
+    position: absolute;
+    margin-top: 580px;
+}
